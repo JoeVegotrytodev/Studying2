@@ -9,6 +9,10 @@ public class Day {
         this.dayCounterByMonth = dayCounterByMonth;
     }
 
+    public int getDayCounterByMonth() {
+        return dayCounterByMonth;
+    }
+
     @Override
     public String toString() {
         return "Day{" +

@@ -47,4 +47,12 @@ public class Week {
                 " Voskresen=" + Voskresen +
                 '}';
     }
+
+    public Day getPoned() {
+        return Poned;
+    }
+
+    public Day getVtornik() {
+        return Vtornik;
+    }
 }
