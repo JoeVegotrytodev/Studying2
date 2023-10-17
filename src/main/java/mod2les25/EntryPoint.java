@@ -25,15 +25,14 @@ public class EntryPoint {
         System.out.println("Years " + getYearsByBDay(bDGregorianCalendar));
 
 //      счетчик времени выполнения
-        GregorianCalendar timerEnd = new GregorianCalendar();
-        long timerDifference = timerEnd.getTimeInMillis() - start.getTimeInMillis();
-        System.out.println("\nDuration in mls = " + timerDifference);
+        System.out.println("\nDuration in mls = " + getDuration(start));
+
 
 
     }
 
 
-    static int getYearsByBDay(Object object){
+    public static int getYearsByBDay(Object object){
         int resultDiff;
 
         if (object instanceof LocalDate){
@@ -63,5 +62,11 @@ public class EntryPoint {
             return (int) (days / 365);
         } else
             throw new ClassCastException("Wrong class");
+    }
+
+    public static Integer getDuration(GregorianCalendar startPoint){
+        GregorianCalendar timerEnd = new GregorianCalendar();
+        long timerDifference = timerEnd.getTimeInMillis() - startPoint.getTimeInMillis();
+        return Math.toIntExact(timerDifference);
     }
 }
