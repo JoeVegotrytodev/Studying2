@@ -59,12 +59,6 @@ public class FruitBase {
                 .stream(order)
                 .filter(fruitName -> (fruitCatalogue.findFruit(fruitName) != null))
                 .forEach(fruitName -> cargo.addFruit(fruitCatalogue.findFruit(fruitName)));
-
-        /*for(Fruit newFruit : order){
-            if(fruitCatalogue.findFruit(newFruit.getName()) != null) {
-                cargo.addFruit(newFruit);
-            }
-        }*/
         return cargo;
     }
 }
